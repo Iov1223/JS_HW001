@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>  
+        //Задача 1.
+        var m = +prompt("Задача 1.\nВведите число:");
+        while (isNaN(m)){
+            m = +prompt("Задача 1.\nПринимаются только числа:");
+        }
+        
+        if (m < 11 && m > 0)
+            alert("Задача 1.\ntrue");
+        else
+            alert("Задача 1.\nfalse");
+        //=========================
+        
+        //Задача 2.
+        var a = +prompt("Задача 2.\nВведите первое число:");
+        while (isNaN(a))
+            a = +prompt("Задача 2.\nПринимаются только числа:");
+        var b = +prompt("Задача 2.\nВведите второе число:");
+        while (isNaN(b))
+            b = +prompt("Задача 2.\nПринимаются только числа:");
+        for (var i = a; i <= b;) {
+               console.log(i);
+               i *= 2;
+        }
+        //==========================
+        
+        //Задача 3.
+        var num, res = 0;
+        if (confirm('Задача 3.\nХотите ввести число?')) 
+        {
+        do {
+          num = +prompt('Задача 3.\nВведите число:');
+          while (isNaN(num))
+                    num = +prompt("Задача 3.\nПринимаются только числа:");
+          res += num;
+        } while (confirm('Задача 3.\nХотите ввести число?'));
+        }
+        alert(`Задача 3.\nСумма введёных чисел равнаравна: ${res}`);
+        //==========================
+        
+        //Задача 4.
+        var str = prompt('Задача 4.\nВведите любую строку:'), strRes = '';
+        if  (str.indexOf(1) > 0 || str.indexOf(' ') > 0 ){
+            for (var i = 0; i < str.length; i++){
+                if (str[i] != 1 && str[i] != ' ')
+                    strRes += str[i];
+                }
+            alert(strRes);
+        }
+        else {
+            alert('В введëнной строке нет ни пробелов, ни единиц.');
+        }
+        //==========================
+        
+        //Задача 5.
+        alert('Задача 5.\nРезультат будет выведен в консоль.');
+        var rand, count = 0;
+        console.log('Задача 5.');
+        do {
+            rand = Math.floor(Math.random() * 20) + 1;
+            if (rand % 3 != 0){
+                console.log(rand);
+                count++;
+            }
+        } while (count < 10);
+
+    </script>
+</body>
+</html>
